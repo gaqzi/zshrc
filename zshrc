@@ -30,6 +30,5 @@ export PATH="/sbin:/bin:/usr/sbin:/usr/bin:/usr/games:/usr/local/sbin:/usr/local
 
 source $ZSH/prompt.zsh
 
-if [ -f $HOME/.zshrc.local ] ; then
-    source $HOME/.zshrc.local
-fi
+[ -f $HOME/.zshrc.local ] && source $HOME/.zshrc.local
+
