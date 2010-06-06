@@ -1,12 +1,9 @@
 #!/bin/zsh
-source zshrc
+LOCAL_PATH=`dirname $0`
 
-grep -v -E 'source|ZSH=|fpath' zshrc
+grep -v -E 'source|ZSH=|fpath' $LOCAL_PATH/zshrc
 
-sources=`grep source zshrc`
+sources=`grep source $LOCAL_PATH/zshrc`
 for file in $sources ; do
-    lines=`echo $file | sed -E 's/(source)/cat/' | zsh`
-    for line in $lines ; do
-        echo $line
-    done
+    eval "`echo $file | sed 's/source/cat/' | sed "s/ZSH/LOCAL_PATH/"`"
 done
