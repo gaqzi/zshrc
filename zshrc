@@ -21,8 +21,15 @@ setopt EXTENDED_GLOB
 
 export BLOCKSIZE=K
 export LC_CTYPE=sv_SE.UTF-8
+export TZ=Europe/Stockholm
 export PAGER=less
 export EDITOR=vim
-export WORDCHARS="${WORDCHARS:s#/#}"
+export RSPEC=true
+export WORDCHARS="${WORDCHARS:s#/#}" # Remove / from WORDCHARS, leave the rest
+export PATH="/sbin:/bin:/usr/sbin:/usr/bin:/usr/games:/usr/local/sbin:/usr/local/bin:/usr/X11R6/bin:$HOME/bin"
 
 source $ZSH/prompt.zsh
+
+if [ -f $HOME/.zshrc.local ] ; then
+    source $HOME/.zshrc.local
+fi
