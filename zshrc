@@ -15,8 +15,6 @@ setopt NO_AUTO_MENU
 setopt NO_CORRECT
 setopt NO_BEEP
 setopt EMACS
-setopt HIST_FIND_NO_DUPS
-setopt HIST_IGNORE_SPACE
 setopt EXTENDED_GLOB
 
 export BLOCKSIZE=K
