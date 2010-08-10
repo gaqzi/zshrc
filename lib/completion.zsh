@@ -1,6 +1,6 @@
 zmodload -i zsh/complist
 autoload -U compinit
-compinit
+compinit -u
 
 zstyle ':completion:*:default' list-colors $LS_COLORS
 zstyle ':completion:*' special-dirs ..
