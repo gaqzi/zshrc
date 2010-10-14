@@ -1,4 +1,4 @@
-export ZSH=$HOME/.zshrc.d/
+export ZSH=$HOME/code/zshrc
 fpath=($ZSH/functions $fpath)
 
 for file ($ZSH/lib/*.zsh) source $file
