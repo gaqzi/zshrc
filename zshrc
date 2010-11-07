@@ -18,6 +18,7 @@ setopt EMACS
 setopt EXTENDED_GLOB
 
 export BLOCKSIZE=K
+export LANG=en_US.UTF-8
 export LC_CTYPE=sv_SE.UTF-8
 export TZ=Europe/Stockholm
 export PAGER=less
