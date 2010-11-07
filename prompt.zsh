@@ -6,7 +6,7 @@ ZSH_THEME_GIT_PROMPT_SUFFIX="]"
 ZSH_THEME_GIT_PROMPT_DIRTY="*"
 ZSH_THEME_GIT_PROMPT_CLEAN=""
 
-PROMPT='%B%n%b@%m$(git_prompt_info)%# '
+PROMPT='%B%n%b@%m$(git_prompt_info)$(rvm_prompt_info)%# '
 RPROMPT='(%2~)'
 case $TERM in
     cons*|dumb)

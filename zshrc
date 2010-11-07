@@ -1,6 +1,9 @@
 [ -z $ZSH ] && export ZSH=$HOME/code/zshrc/
 fpath=($ZSH/functions $fpath)
 
+export PATH="/sbin:/bin:/usr/sbin:/usr/bin:/usr/games:/usr/local/sbin:/usr/local/bin:/usr/X11R6/bin:$HOME/bin"
+[ -f $HOME/.zshrc.local ] && source $HOME/.zshrc.local
+
 for file ($ZSH/lib/*.zsh) source $file
 for file ($ZSH/plugins/*.zsh) source $file
 
@@ -25,9 +28,5 @@ export PAGER=less
 export EDITOR=vim
 export RSPEC=true
 export WORDCHARS="${WORDCHARS:s#/#}" # Remove / from WORDCHARS, leave the rest
-export PATH="/sbin:/bin:/usr/sbin:/usr/bin:/usr/games:/usr/local/sbin:/usr/local/bin:/usr/X11R6/bin:$HOME/bin"
 
 source $ZSH/prompt.zsh
-
-[ -f $HOME/.zshrc.local ] && source $HOME/.zshrc.local
-
