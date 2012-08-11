@@ -1,7 +1,7 @@
 [ -z $ZSH ] && export ZSH=$HOME/code/zshrc/
 fpath=($ZSH/functions $fpath)
 
-export PATH="/sbin:/bin:/usr/sbin:/usr/bin:/usr/games:/usr/local/sbin:/usr/local/bin:/usr/X11R6/bin:$HOME/bin"
+export PATH="$HOME/bin:/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin:/usr/games:/usr/X11R6/bin"
 [ -f $HOME/.zshrc.local ] && source $HOME/.zshrc.local
 
 for file ($ZSH/lib/*.zsh) source $file
@@ -23,7 +23,7 @@ setopt EXTENDED_GLOB
 export BLOCKSIZE=K
 export LANG=en_US.UTF-8
 export LC_CTYPE=sv_SE.UTF-8
-export TZ=Europe/Stockholm
+export TZ=Asia/Singapore
 export PAGER=less
 export EDITOR=vim
 export RSPEC=true
