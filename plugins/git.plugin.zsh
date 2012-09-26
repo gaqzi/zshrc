@@ -28,3 +28,17 @@ function current_branch() {
 # these aliases take advangate of the previous function
 alias ggpull='git pull origin $(current_branch)'
 alias ggpush='git push origin $(current_branch)'
+
+# what changed will give us the log of the
+# specified folder since the given file was last changed.$1=folder $2=file
+function whatchanged() {
+  for i in `git rev-list --all $2` ; do
+    git lol $1 "$i.." 2>/dev/null
+    RET=$?
+    if [ $RET -ne 0 ]
+    then
+        echo "Nothing"
+    fi
+    break;
+  done
+}
