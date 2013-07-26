@@ -1,7 +1,7 @@
 [ -z $ZSH ] && export ZSH=$HOME/code/zshrc/
 fpath=($ZSH/functions $fpath)
 
-export PATH="$HOME/bin:/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin:/usr/games:/usr/X11R6/bin"
+export PATH="$HOME/bin:/usr/local/sbin:/usr/local/bin:/usr/local/share/npm/bin:/usr/sbin:/usr/bin:/sbin:/bin"
 [ -f $HOME/.zshrc.local ] && source $HOME/.zshrc.local
 
 for file ($ZSH/lib/*.zsh) source $file
