@@ -1,3 +1,6 @@
+function rvm_prompt_info() { return }
+
+# Don't load unles this folder exists
 if [ ! -d ~/.rvm ] ; then
     return
 fi
@@ -64,6 +67,7 @@ function _rvm_completion {
     source $rvm_path"/scripts/zsh/Completion/_rvm"
 }
 compdef _rvm_completion rvm
+
 
 # get the name of the branch we are on
 function rvm_prompt_info() {
