@@ -1,3 +1,7 @@
+if [ ! -d ~/.rvm ] ; then
+    return
+fi
+
 fpath=($rvm_path/scripts/zsh/Completion $fpath)
 
 alias rubies='rvm list rubies'
@@ -57,6 +61,12 @@ function gems {
 }
 
 function _rvm_completion {
-  source $rvm_path"/scripts/zsh/Completion/_rvm"
+    source $rvm_path"/scripts/zsh/Completion/_rvm"
 }
 compdef _rvm_completion rvm
+
+# get the name of the branch we are on
+function rvm_prompt_info() {
+    ruby_version=$(~/.rvm/bin/rvm-prompt i v g s 2> /dev/null) || return
+    echo "($ruby_version)"
+}
