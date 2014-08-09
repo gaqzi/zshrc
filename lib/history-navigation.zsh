@@ -12,6 +12,6 @@ autoload history-search-end
 zle -N history-beginning-search-backward-end history-search-end
 zle -N history-beginning-search-forward-end history-search-end
 
-bindkey "\e[A" history-beginning-search-backward-end #cursor up
-bindkey "\e[B" history-beginning-search-forward-end  #cursor down
+bindkey "\e[A" history-substring-search-up   #cursor up
+bindkey "\e[B" history-substring-search-down #cursor down
 bindkey ' ' magic-space    # also do history expansion on space
