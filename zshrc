@@ -1,4 +1,4 @@
-[ -z $ZSH ] && export ZSH=$HOME/code/zshrc/
+[ -z $ZSH ] && export ZSH=$HOME/code/conf/zshrc/
 fpath=($ZSH/functions $fpath)
 
 export PATH="$HOME/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
