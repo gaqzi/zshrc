@@ -1,11 +1,11 @@
 [ -z $ZSH ] && export ZSH=$HOME/code/conf/zshrc/
 fpath=($ZSH/functions $fpath)
 
-export PATH="$HOME/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+export PATH="$HOME/.bin:$HOME/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
 [ -f $HOME/.zshrc.local ] && source $HOME/.zshrc.local
 
 for file ($ZSH/lib/*.zsh) source $file
-for file ($ZSH/plugins/*.zsh) source $file
+for file ($ZSH/plugins/**/*.zsh) source $file
 
 # Enable auto-execution of functions
 typeset -ga preexec_functions
